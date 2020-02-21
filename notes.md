@@ -19,7 +19,7 @@ like this --
     useNullAsDefault: true;
   },
 
- - knex migrate:create_xxx_table (xxx = name of table)
+ - knex migrate:make create_xxx_table (xxx = name of table)
 
  got to seeds folder and add schema to table created
 
