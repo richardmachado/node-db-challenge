@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     Projects.get()
-    .then(recipes => {
-      res.status(200).json(recipes);
+    .then(project => {
+      res.status(200).json(project);
     })
     .catch(err => {
       console.log(err)
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
           res.status(200).json(project);
       })
       .catch(err => {
-          console.log(err)
+         
           res.status(500).json({ errorMessage: 'Failed to post project to database.'});
       });
   });
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
           res.status(200).json(task);
       })
       .catch(err => {
-          console.log(err)
+      
           res.status(500).json({ errorMessage: 'Error posting task to database.'});
       });
   });
@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
         res.status(200).json(resource);
     })
     .catch(err => {
-        console.log(err)
+     
         res.status(500).json({ errorMessage: 'Error posting resource to database.'});
     });
 });
