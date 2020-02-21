@@ -11,7 +11,7 @@ exports.up = function (knex) {
           tbl.varchar('description', 500)
 
           tbl.boolean('completed')
-              .defaultTo(false)
+              .defaultTo("false")
               .notNullable();
       })
       .createTable('resources', tbl => {
@@ -41,7 +41,7 @@ exports.up = function (knex) {
           tbl.varchar('notes', 1000)
 
           tbl.boolean('completed')
-          .defaultTo(false)
+          .defaultTo('false')
           .notNullable();
       })
       .createTable('projects_resources', tbl => {
